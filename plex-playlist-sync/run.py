@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 import time
 
 import deezer
@@ -10,6 +11,16 @@ from spotipy.oauth2 import SpotifyClientCredentials
 from utils.deezer import deezer_playlist_sync
 from utils.helperClasses import UserInputs
 from utils.spotify import spotify_playlist_sync
+
+# Logging config
+logging.basicConfig(
+    stream=sys.stdout,
+    level=logging.INFO, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+    )
+
+# Load ENV variables
+load_dotenv()
 
 # Read ENV variables
 userInputs = UserInputs(
