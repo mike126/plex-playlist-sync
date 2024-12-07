@@ -25,6 +25,7 @@ def _get_sp_user_playlists(
     try:
         sp_playlists = sp.user_playlists(user_id)
         for playlist in sp_playlists["items"]:
+            if playlist is None: continue
             playlists.append(
                 Playlist(
                     id=playlist["uri"],
