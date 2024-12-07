@@ -1,7 +1,6 @@
 import csv
 import logging
 import pathlib
-import sys
 from difflib import SequenceMatcher
 from typing import List
 
@@ -10,9 +9,6 @@ from plexapi.exceptions import BadRequest, NotFound
 from plexapi.server import PlexServer
 
 from .helperClasses import Playlist, Track, UserInputs
-
-logging.basicConfig(stream=sys.stdout, level=logging.INFO)
-
 
 def _write_csv(tracks: List[Track], name: str, path: str = "/data") -> None:
     """Write given tracks with given name as a csv.

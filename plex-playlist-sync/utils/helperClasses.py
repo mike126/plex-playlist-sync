@@ -32,6 +32,8 @@ class UserInputs:
     spotipy_client_id: str
     spotipy_client_secret: str
     spotify_user_id: str
+    spotipy_use_oauth: bool
+    spotipy_redirect_uri: str
 
     deezer_user_id: str
     deezer_playlist_ids: str
